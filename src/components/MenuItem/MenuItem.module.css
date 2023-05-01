@@ -1,0 +1,10 @@
+.item {
+  color: rgb(80, 80, 80);
+  font-size: 1.1rem;
+}
+
+.item--selected {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
