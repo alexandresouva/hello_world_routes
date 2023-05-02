@@ -1,0 +1,48 @@
+.post__subtitle{
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.post__photo{
+  margin-bottom: .5rem;
+  margin-left: 1.5rem;
+  width: 40vw;
+  float: right;
+}
+
+.post__paragraph {
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .post__photo{
+      float: none;
+      display: block;
+      margin: 0 auto 2rem;
+      width: 70vw;
+  }
+
+  .post__paragraph {
+      margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 744px) {
+  .post__photo{
+      width: 100%;
+  }
+
+  .post__subtitle {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-bottom: 1.5rem;
+  }
+
+  .post__paragraph {
+      font-size: 1rem;
+      line-height: 1.75rem;
+  }
+}
