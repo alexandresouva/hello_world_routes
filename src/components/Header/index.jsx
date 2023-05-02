@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import MenuItem from '../MenuItem';
+import MenuItem from 'components/MenuItem';
 
 const Header = () => {
   return (
