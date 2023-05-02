@@ -1,6 +1,6 @@
-import styles from './Post.module.css';
+import styles from './PostTemplate.module.css';
 
-const Post = ({ postCover, title, children }) => {
+const PostTemplate = ({ postCover, title, children }) => {
   return (
     <article className={styles.post}>
       <div
@@ -15,4 +15,4 @@ const Post = ({ postCover, title, children }) => {
   );
 };
 
-export default Post;
+export default PostTemplate;
