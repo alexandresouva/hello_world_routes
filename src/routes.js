@@ -4,6 +4,7 @@ import AboutMe from './pages/AboutMe';
 import Header from './components/Header';
 import Footer from 'components/Footer';
 import PageTemplate from 'components/PageTemplate';
+import Post from 'components/Post';
 
 function RoutesApp() {
   return (
@@ -13,6 +14,7 @@ function RoutesApp() {
         <Route path="/" element={<PageTemplate />}>
           <Route index element={<Home />} />
           <Route path="sobremim" element={<AboutMe />} />
+          <Route path="post/:id" element={<Post />} />
         </Route>
         <Route path="*" element={<div>404: Page not found.</div>} />
       </Routes>
