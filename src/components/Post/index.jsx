@@ -1,4 +1,4 @@
-import { json, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import styles from './Post.module.css';
 import posts from 'json/posts.json';
 import PostTemplate from 'components/PostTemplate';

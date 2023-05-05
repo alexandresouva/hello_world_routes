@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from 'components/Footer';
 import PageTemplate from 'components/PageTemplate';
 import Post from 'components/Post';
+import Error404 from 'components/Error404';
 
 function RoutesApp() {
   return (
@@ -16,7 +17,7 @@ function RoutesApp() {
           <Route path="sobremim" element={<AboutMe />} />
           <Route path="post/:id" element={<Post />} />
         </Route>
-        <Route path="*" element={<div>404: Page not found.</div>} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
     </BrowserRouter>
