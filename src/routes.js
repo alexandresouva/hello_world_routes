@@ -15,8 +15,9 @@ function RoutesApp() {
         <Route path="/" element={<PageTemplate />}>
           <Route index element={<Home />} />
           <Route path="sobremim" element={<AboutMe />} />
-          <Route path="post/:id" element={<Post />} />
         </Route>
+
+        <Route path="post/:id" element={<Post />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />
