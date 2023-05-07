@@ -12,27 +12,27 @@
   font-family: var(--fonte-secundaria);
   font-size: 6rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
 }
 
 .error__title {
   font-family: var(--fonte-secundaria);
-  font-size: 3rem;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
 }
 
-.paragrafo {
-  font-size: 1.5rem;
+.error__paragraph {
+  font-size: 1.4rem;
   line-height: 1.75rem;
 }
 
-.error__btn {
+.error__btnContainer{
   text-align: start;
   margin-top: 3.5rem;
   margin-left: 30vw;
 }
 
-.imagemCachorro {
+.error__img{
   position: absolute;
   height: 25vw;
   bottom: calc(-25vw * 0.5);
@@ -43,11 +43,11 @@
 }
 
 @media (max-width: 1100px) {    
-  .error__paragraph {
+  .texto404 {
       margin-bottom: 2.25rem;
   }
 
-  .error__btn {
+  .botaoContainer {
       margin-top: 2.75rem;
       margin-left: 15vw;
   }
@@ -58,31 +58,31 @@
       left: 40vw;
   }
 
-  .empty__space {
+  .espacoEmBranco {
       height: 53vw;
   }
 }
 
 @media (max-width: 744px) {
-  .content {
+  .conteudoContainer {
       padding: 3rem 1rem 17rem;
   }
 
-  .error__paragraph {
+  .texto404 {
       font-size: 4rem;
   }
 
-  .error__title {
+  .titulo {
       font-size: 2.25rem;
       line-height: 3rem;
   }
 
-  .error__paragraph {
+  .paragrafo {
       font-size: 1.125rem;
       line-height: 1.3125rem;
   }
 
-  .error__btn {
+  .botaoContainer {
       margin: 2.5rem 0 0;
       text-align: center;
   }
@@ -97,7 +97,7 @@
       max-height: 375px;
   }
 
-  .empty__space {
+  .espacoEmBranco {
       height: calc(94vw * 0.5);
   }
 }

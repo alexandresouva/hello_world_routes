@@ -1,7 +1,10 @@
+import MainButton from 'components/MainButton';
 import styles from './Error404.module.css';
 import error404 from 'assets/erro_404.png';
+import { useNavigate } from 'react-router-dom';
 
 const Error404 = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className={styles.content}>
@@ -11,17 +14,18 @@ const Error404 = () => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam qui
           impedit ducimus, tenetur at dignissimos.
         </p>
-        <p className={styles.error__paragraph}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
-          quis alias tempora quod corrupti aperiam repudiandae ab repellendus
-          eum, in eligendi. Odio omnis beatae perspiciatis odit cumque itaque
-          nemo facere!
-        </p>
-        <div>
-          <button className={styles.error__btn}>Voltar</button>
+        <div
+          className={styles.error__btnContainer}
+          onClick={() => navigate(-1)}
+        >
+          <MainButton>Voltar</MainButton>
         </div>
 
-        <img src={error404} alt="Cachorro de óculos e vestido como humanos." />
+        <img
+          className={styles.error__img}
+          src={error404}
+          alt="Cachorro de óculos e vestido como humanos."
+        />
       </div>
       <div className={styles.empty__space}></div>
     </>
