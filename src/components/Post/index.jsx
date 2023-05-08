@@ -5,6 +5,7 @@ import PostTemplate from 'components/PostTemplate';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import Error404 from 'components/Error404';
 import PageTemplate from 'components/PageTemplate';
+import PostCard from 'components/PostCard';
 
 const Post = () => {
   const { id } = useParams();
@@ -14,24 +15,33 @@ const Post = () => {
     return <Error404 />;
   }
 
+  const recommendedPosts = posts
+    .filter((post) => post.id !== Number(id))
+    .sort((a, b) => b.id - a.id)
+    .slice(0, 4);
+
   return (
-    <Routes>
-      <Route element={<PageTemplate />}>
-        <Route
-          index
-          element={
-            <PostTemplate
-              postCover={`/assets/posts/${post.id}/capa.png`}
-              title={post.titulo}
-            >
-              <div className={styles.markdown}>
-                <ReactMarkdown>{post.texto}</ReactMarkdown>
-              </div>
-            </PostTemplate>
-          }
-        />
-      </Route>
-    </Routes>
+    <PageTemplate>
+      <PostTemplate
+        postCover={`/assets/posts/${post.id}/capa.png`}
+        title={post.titulo}
+      >
+        <div className={styles.markdown}>
+          <ReactMarkdown>{post.texto}</ReactMarkdown>
+        </div>
+
+        <div className={styles.recommended}>
+          <h2 className={styles['recommended--title']}>
+            Outros posts que você pode gostar:
+          </h2>
+          <ul className={styles['recommended--posts']}>
+            {recommendedPosts.map((post) => (
+              <PostCard key={post.id} post={post} />
+            ))}
+          </ul>
+        </div>
+      </PostTemplate>
+    </PageTemplate>
   );
 };
 

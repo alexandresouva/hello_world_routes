@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import styles from './PostCard.module.css';
 import MainButton from 'components/MainButton';
+import ScrollToTop from 'components/scrollToTop';
 
 const PostCard = ({ post }) => {
   return (
-    <Link to={`post/${post.id}`}>
+    <Link to={`/post/${post.id}`}>
       <li key={post.id} className={styles.card}>
         <div>
           <img
